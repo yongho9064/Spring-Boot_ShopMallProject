@@ -1,5 +1,6 @@
 package com.shop.entity;
 
+import com.shop.config.BaseEntity;
 import com.shop.constant.Role;
 import com.shop.dto.MemberFormDto;
 import jakarta.persistence.*;
@@ -12,7 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Table(name = "member")
 @Getter @Setter
 @ToString
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @Column(name = "member_id")

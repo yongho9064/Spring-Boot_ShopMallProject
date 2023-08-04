@@ -1,15 +1,14 @@
 package com.shop.entity;
 
+import com.shop.config.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Getter
 @Setter
-public class OrderItem {
+public class OrderItem extends BaseEntity {
 
     @Id
     @GeneratedValue
@@ -28,7 +27,4 @@ public class OrderItem {
 
     private int count;
 
-    private LocalDateTime regTime;
-
-    private LocalDateTime updateTime;
 }
